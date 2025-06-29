@@ -12,11 +12,11 @@ let eyeLock = document.getElementById("eye-lock")
 eyeLock.addEventListener("click",()=>{
     if(totalAmt.type === "password"){
         totalAmt.type = "number"
-        eyeLock.style.backgroundImage = "url(/assets/images/eye.png)"
+        eyeLock.style.backgroundImage = "url(/assets/eye.png)"
     }
     else{
         totalAmt.type = "password"
-        eyeLock.style.backgroundImage = "url(/assets/images/Vector.png)"
+        eyeLock.style.backgroundImage = "url(/assets/Vector.png)"
     }
 })
 
