@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+#logo{
+    width: 100%;
+    /* background-color: rgba(0, 255, 255, 0.326); */
+}
+
+#logo h1{
+    width: 85%;
+    height: 100px;
+    background-image: url(/assets/mak\ logo.png);
+    background-repeat: no-repeat;
+    background-position: calc(30%);
+    background-size: 120px;
+}
+
+
+.icon-but-div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.line{
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4b4b997d;
+    width: 85%;
+}
+
+.icon-but-div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.icon-buttons{
+
+    outline: none;
+    border: none;
+    background-color:transparent;
+    /* margin: 5px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7px;
+    border-radius: 8px;
+    width: 85%;
+    color: white;
+    gap: 10px;
+    padding-left: 10px;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+    
+}
+
+.icon-buttons:hover{
+    background-color: #6359E9;
+    
+}
+
+.icon-img{
+    height: 20px;
+}
+
+
+.logout-man{
+    /* background-color: rgba(0, 255, 255, 0.417); */
+    width: 100%;
+    height: 100px;
+    margin:auto;
+    /* margin-top: 25px; */
+    position: absolute;
+    bottom: 25px;
+    /* left: 10%; */
+}
+
+.man{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    /* background-color: rgba(250, 235, 215, 0.205); */
+    gap: 7px;
+    
+}
+
+.man-circle{
+    height: 45px;
+    width: 45px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+#man-name{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#arrow-span{
+    height: 45px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow{
+    width: 10px;
+}

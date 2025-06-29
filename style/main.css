@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+        font-family: "poppins", "roboto", serif;
+        background-color: #141332;
+        color: white;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    /* gap: 10%; */
+    grid-template-areas: 
+                             "sec-1 sec-1 sec-2 sec-2 sec-2 sec-2"
+                             "sec-1 sec-1 sec-3 sec-4 sec-6 sec-6"
+                             "sec-1 sec-1 sec-5 sec-5 sec-6 sec-6";
+                             grid-template-rows: 15% 20%  ;
+
+   grid-template-columns:  10% 5% 25% 25% 10% 15%;
+   gap: 23px;
+}
+
+section{
+    background-color: #1D1D41;
+}
+
+
+.sec-1{
+    grid-area: sec-1;
+    border-radius: 0px 15px 15px 0px;
+    position: relative;
+}
+
+.sec-2{
+grid-area: sec-2;
+}
+
+.sec-3{
+ grid-area: sec-3;
+ border-radius: 15px;
+}
+
+.sec-4{
+ grid-area: sec-4;
+  border-radius: 15px;
+}
+
+.sec-5{
+ grid-area: sec-5;
+ border-radius: 15px 15px 0px 0;
+}
+
+.sec-6{
+ grid-area: sec-6;
+ border-radius: 15px;
+ margin-bottom: 20px;
+}

@@ -1,0 +1,19 @@
+
+
+.sec-2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent !important;
+}
+
+.intro{
+    font-size: 25px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.text{
+    color: #A6A6A6;
+    font-size: 12px;
+}
