@@ -8,10 +8,11 @@ import {
     googleProvider
 } from "./firebase.js"
 
+
 let passwordInput = document.getElementById("password-input")
-let emialInput = document.getElementById("email-input")
+let emailInput = document.getElementById("email-input")
 let passwordImg = document.getElementById("password-hide")
-let loginBtn = document.getElementById("login-Btn")
+let signupBtn = document.getElementById("signup-Btn")
 let changePage = document.getElementById("change-page")
 
 
@@ -29,13 +30,6 @@ passwordImg.addEventListener("click",()=>{
 })
 
 
-// login page to signin page function
-changePage.addEventListener("click",(e)=>{
-     e.preventDefault(); 
-    window.location.replace ("./signup.html")
-})
-
-
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -50,22 +44,31 @@ onAuthStateChanged(auth, (user) => {
 });
 
 
+// signup page to login page function
 
-loginBtn.addEventListener("click",(e)=>{
+changePage.addEventListener("click",(e)=>{
+     e.preventDefault(); 
+    window.location.replace ("./index.html")
+})
+
+
+
+
+signupBtn.addEventListener("click",(e)=> {
  e.preventDefault(); 
-  signInWithEmailAndPassword(auth, emialInput.value, passwordInput.value)
-    .then((res) => {
-      // Signed in 
-      const user = res.user;
-      console.log("user ",res.user )
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log("error :",error.code)
-    });
-
+    createUserWithEmailAndPassword(auth, emailInput.value , passwordInput.value)
+      .then((res) => {
+        // Signed up 
+        const user = res.user;
+        console.log("user : login" , user.uid)
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("error :",error.code)
+        // ..
+      });
 })
 
 // continue with google function

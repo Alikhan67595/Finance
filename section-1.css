@@ -90,24 +90,35 @@
     
 }
 
-.man-circle{
-    height: 45px;
-    width: 45px;
-    background-color: aqua;
+.man-circle ,#man-image{
+    height: 40px;
+    width: 40px;
+    /* background-color: aqua; */
+    /* background-image: url(/assets/help-circle.png); */
+    /* background-position: center;
+    background-size: 100%; */
+    /* background-repeat: no-repeat; */
     border-radius: 50%;
+
 }
 
-#man-name{
-    height: 45px;
+#logout{
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    gap: 7px;
 }
 
 #arrow-span{
-    height: 45px;
+    height: 40px;
     /* background-color: blue; */
     display: flex;
     align-items: center;
@@ -115,5 +126,5 @@
 }
 
 #arrow{
-    width: 10px;
+    width: 25px;
 }

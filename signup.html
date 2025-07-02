@@ -7,30 +7,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <!-- login Page Section HTML -->
-    <form id="section-1">
-        <div id="heading">Welcome Back</div>
+  <form id="section-1">
+        <div id="heading">Create Account</div>
         <div><input id="email-input" type="email" placeholder="Enter Your Email" autocomplete="email"></div>
         
-        <div id="pass-div"><input id="password-input" type="password" placeholder="Enter Your Password" autocomplete="current-password">
+        <div id="pass-div"><input id="password-input" type="password" placeholder="Enter Your Password" autocomplete="new-password">
             <span id="password-hide"></span>
         </div>
-        <div><button id="login-Btn" type="button">Log In</button></div>
+        <div><button type="button" id="signup-Btn">Sign up</button></div>
 
-        <div id="signup-line">Don't have an account?<button type="button" id="change-page">Sign up</button></div>
+        <div id="signup-line">Already have an account?<button type="button" id="change-page">Log in</button></div>
 
         <div id="line"></div>
 
         <div><button type="button" id="google-Btn"><span id="google-img"><img src="/assets/google.svg" alt=""></span>Continue with Google</button></div>
 
     </form>
- 
-
-    
 
 
     <script src="./firebase.js" type="module"></script>
-    <script src="./app.js" type="module"></script>
+    <script src="./signup.js" type="module"></script>
 </body>
 </html>

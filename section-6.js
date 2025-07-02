@@ -1,3 +1,45 @@
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    GoogleAuthProvider,
+    signInWithPopup,
+    auth,
+    signOut
+} from "./firebase.js"
+
+let userPhoto;
+let userName;
+
+
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    console.log("user :", user)
+
+    userPhoto = user.photoURL
+    userName = user.displayName
+    
+    if (userPhoto) {
+  document.getElementById("man-image").src = userPhoto;
+} else {
+  document.getElementById("man-image").src = "/assets/user.png"; // ← tumhari apni image
+} 
+
+    document.getElementById("display-name").innerText = userName
+
+    // ...
+} else {
+    // User is signed out
+    console.log("user don't exist")
+    window.location.replace ("./index.html")
+    // ...
+  }
+});
+
+
+
 let  notice =document.getElementById("low-balance") 
 let totalAmt = document.getElementById("total-amt")
 
@@ -99,3 +141,18 @@ withdrawSendBtn.addEventListener("click",()=>{
 })
 
 
+let logOut = document.getElementById("logout")
+
+let signOutUser =()=>{
+
+signOut(auth).then(() => {
+  Window.location.replace ("./index.html")
+}).catch((error) => {
+  // An error happened.
+  console.log("error :" , error.code)
+});
+
+}
+
+
+logOut.addEventListener("click",signOutUser)
